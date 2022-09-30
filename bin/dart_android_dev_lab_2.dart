@@ -67,7 +67,12 @@ int task_2_4(int number){
   }
   return max;
 }
-
+/*
+fib =>
+task_2.5
+Напишите метод, 
+который возвращает число Фибоначчи из указанной позиции.
+ */
 int fib(int number){
   if(number==0){
     return 0;
@@ -77,10 +82,37 @@ int fib(int number){
   }
   return fib(number - 1) +fib(number -2);
 }
+/*
+ anonimous =>
+ task_2.6
+ Создайте анонимный метод (вложенный метод (внутри другого метода)), 
+ который умножает переменные a и b.
+ */
+
+void f(){
+  Function anonimous = (int a, int b) => print(a*b);
+  anonimous(4,6);
+}
+/*
+anon =>
+task_2.7
+Создайте лямбда выражение (анонимный метод), 
+который возвращает максимум из двух переменных. compare(a,b);
+ */
+
+void d(){
+  Function compare = (int a, int b) {
+    if(a>b){
+      print(a);
+    }
+    print(b);
+  };
+  compare(4,6);
+}
 
 
 
-void main(List<String> arguments) {
-  
-  print(fib(6));
+void main() {
+  f();
+  d();
 }
